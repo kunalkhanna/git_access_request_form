@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitAccessForm</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+	<nav class="navbar navbar-dark bg-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+	    		<a class="navbar-brand" href="/">SIG Gitlab Access Request Form</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			    <li class="nav-item"><a class="nav-link" href="/requests/new">New Request</a></li>
+			    <li class="nav-item"><a class="nav-link" href="/requests/index">Logs</a></li>
+		  	</ul>
+		  </div>
+	</nav>
+    <%= yield %>
+  </body>
+</html>

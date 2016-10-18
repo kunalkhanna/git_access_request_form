@@ -1,0 +1,31 @@
+#config/choices.yml
+
+user_action:
+  Add: Add
+  Delete: Delete
+  Update: Update
+level:
+  Guest: Guest
+  Reporter: Reporter
+  Developer: Developer
+  Master: Master
+member:
+  John Doe: jdoe
+  Mary Doe: mdoe
+  James Bond: jbond
+  Luke Skywalker: lskywalker
+  Darth Vader: dvader
+memberlist:
+  Rebel: Rebel
+  The Enterprise: The Enterprise
+  Cartoons: Cartoons
+access_group:
+  STS: STS
+  CIM: CIM
+  RelEng: RelEng
+  DevOps: DevOps
+access_repo:
+  SAT/Prevent: SAT/Prevent
+  CIM/Localization: CIM/Localization
+  STS/Jobrules: STS/Jobrules
+  RelEng/build-hudson: RelEng/build-hudson

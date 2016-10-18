@@ -1,0 +1,68 @@
+    <form accept-charset="UTF-8" action="/requests" role="form" class="new_request" id="new_request" method="POST">
+      <% if @request.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@request.errors.count, "error") %> prohibited
+          this request from being saved:
+        </h2>
+        <ul>
+          <% @request.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div class="form-group">    
+        <label class="control-label" for=:user_action>Access Action:</label>
+        <select class="custom-select" name="request[user_action]">
+          <option value="Add">Add</option>
+          <option value="Delete">Delete</option>
+          <option value="Update">Update</option>
+        </select>
+      </div> 
+      <div class="form-group">    
+        <label class="control-label" for=:level>Access Level:</label>
+        <select class="custom-select" name="request[level]">
+          <option value="Reporter">Reporter</option>
+          <option value="Developer">Developer</option>
+          <option value="Master">Master</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Grantee_Members">Grantee Members</label>
+        <select multiple class="form-control" name="request[member]">
+          <option>John Doe</option>
+          <option>Mary Doe</option>
+          <option>James Bond</option>
+          <option>Luke Skywalker</option>
+          <option>Darth Vader</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Grantee Memberlist">Grantee Memberlists</label>
+        <select multiple class="form-control" name="request[memberlist]">
+          <option>Rebel </option>
+          <option>The Empire</option>
+          <option>Cartoons</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Access group">Access Groups</label>
+        <select multiple class="form-control" name="request[access_group]">
+          <option>STS</option>
+          <option>CIM</option>
+          <option>RenEng</option>
+          <option>DevOps</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Access repo">Access Repos</label>
+        <select multiple class="form-control" name="request[access_repo]">
+          <option>SAT/Prevent</option>
+          <option>CIM/Localization</option>
+          <option>STS/Jobrules</option>
+          <option>RelEng/build-hudson</option>
+        </select>
+      </div>
+      <button type="submit" name="submit" class="btn btn-success" id="submit">Submit</button>
+    </form>

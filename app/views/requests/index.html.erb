@@ -1,0 +1,31 @@
+<h1>Gitlab Access request form</h1>
+<p>This is the gitlab access request form. Development in progress..</p>
+
+<%= link_to 'New request', new_request_path %>
+<table>
+  <tr>
+    <th>Action</th>
+    <th>Level</th>
+    <th>Member</th>
+    <th>Memberlist</th>
+    <th>Access Group</th>
+    <th>Access_Repo</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @requests.each do |r| %>
+    <tr>
+      <td><%= r.user_action %></td>
+      <td><%= r.level %></td>
+      <td><%= r.member %></td>
+      <td><%= r.memberlist %></td>
+      <td><%= r.access_group %></td>
+      <td><%= r.access_repo %></td>
+      <td><%= link_to 'Show', request_path(request) %></td>
+      <td><%= link_to 'Edit', edit_request_path(request) %></td>
+      <td><%= link_to 'Destroy', request_path(request),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
